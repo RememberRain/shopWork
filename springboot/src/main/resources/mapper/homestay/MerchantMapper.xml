@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fast.homestay.mapper.MerchantMapper">
+
+    <resultMap type="Merchant" id="MerchantResult">
+        <result property="merchantId"    column="merchant_id"    />
+        <result property="realName"    column="real_name"    />
+        <result property="idCard"    column="id_card"    />
+        <result property="phone"    column="phone"    />
+        <result property="email"    column="email"    />
+        <result property="idCardFront"    column="id_card_front"    />
+        <result property="idCardBack"    column="id_card_back"    />
+        <result property="license"    column="license"    />
+        <result property="authStatus"    column="auth_status"    />
+        <result property="userId"    column="user_id"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="userName"    column="user_name"    />
+    </resultMap>
+
+    <select id="selectMerchantList" parameterType="Merchant" resultMap="MerchantResult">
+        select m.merchant_id, m.real_name, m.id_card, m.phone, m.email, m.id_card_front,
+               m.id_card_back, m.license, m.auth_status, m.user_id, m.create_time,
+               u.user_name
+        from merchant m
+        left join user u on m.user_id = u.user_id
+        <where>
+            <if test="authStatus != null  and authStatus != ''"> and m.auth_status = #{authStatus}</if>
+            <if test="userId != null "> and m.user_id = #{userId}</if>
+            <if test="userName != null and userName != ''">
+                and u.user_name like concat('%', #{userName} ,'%')
+            </if>
+        </where>
+    </select>
+
+    <select id="selectMerchantByMerchantId" parameterType="String" resultMap="MerchantResult">
+        select merchant_id, real_name, id_card, phone, email, id_card_front, id_card_back, license, auth_status, user_id, create_time from merchant
+        where merchant_id = #{merchantId}
+    </select>
+
+    <insert id="insertMerchant" parameterType="Merchant">
+        insert into merchant
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="merchantId != null and merchantId != ''">merchant_id,</if>
+            <if test="realName != null and realName != ''">real_name,</if>
+            <if test="idCard != null and idCard != ''">id_card,</if>
+            <if test="phone != null and phone != ''">phone,</if>
+            <if test="email != null and email != ''">email,</if>
+            <if test="idCardFront != null and idCardFront != ''">id_card_front,</if>
+            <if test="idCardBack != null and idCardBack != ''">id_card_back,</if>
+            <if test="license != null and license != ''">license,</if>
+            <if test="authStatus != null and authStatus != ''">auth_status,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="merchantId != null and merchantId != ''">#{merchantId},</if>
+            <if test="realName != null and realName != ''">#{realName},</if>
+            <if test="idCard != null and idCard != ''">#{idCard},</if>
+            <if test="phone != null and phone != ''">#{phone},</if>
+            <if test="email != null and email != ''">#{email},</if>
+            <if test="idCardFront != null and idCardFront != ''">#{idCardFront},</if>
+            <if test="idCardBack != null and idCardBack != ''">#{idCardBack},</if>
+            <if test="license != null and license != ''">#{license},</if>
+            <if test="authStatus != null and authStatus != ''">#{authStatus},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMerchant" parameterType="Merchant">
+        update merchant
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="realName != null and realName != ''">real_name = #{realName},</if>
+            <if test="idCard != null and idCard != ''">id_card = #{idCard},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="email != null and email != ''">email = #{email},</if>
+            <if test="idCardFront != null and idCardFront != ''">id_card_front = #{idCardFront},</if>
+            <if test="idCardBack != null and idCardBack != ''">id_card_back = #{idCardBack},</if>
+            <if test="license != null and license != ''">license = #{license},</if>
+            <if test="authStatus != null and authStatus != ''">auth_status = #{authStatus},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where merchant_id = #{merchantId}
+    </update>
+
+    <delete id="deleteMerchantByMerchantIds" parameterType="String">
+        delete from merchant where merchant_id in
+        <foreach item="merchantId" collection="array" open="(" separator="," close=")">
+            #{merchantId}
+        </foreach>
+    </delete>
+
+    <!--查询当前用户的审核状态, 如果没有提交认证, 则为未提交-->
+    <select id="selectUserAuthStatus" resultType="java.lang.String">
+        select auth_status
+        from merchant
+        where user_id = #{userId}
+    </select>
+
+    <!--根据当前用户ID删除之前提交的商家信息-->
+    <delete id="deleteMerchantByUserId">
+        delete
+        from merchant
+        where user_id = #{userId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fast.homestay.mapper.HomestayMapper">
+
+    <resultMap type="Homestay" id="HomestayResult">
+        <result property="homestayId" column="homestay_id"/>
+        <result property="title" column="title"/>
+        <result property="price" column="price"/>
+        <result property="address" column="address"/>
+        <result property="tags" column="tags"/>
+        <result property="image" column="image"/>
+        <result property="description" column="description"/>
+        <result property="userId" column="user_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="userName" column="user_name"/>
+        <result property="stock" column="stock"/>
+        <result property="sales" column="sales"/>
+    </resultMap>
+
+    <select id="selectTopSalesList" resultMap="HomestayResult">
+        select homestay_id, title, price, address, tags, image, sales
+        from homestay
+        order by sales desc limit 9
+    </select>
+
+    <select id="selectHomestayForAI" resultMap="HomestayResult">
+        select homestay_id, title, price, tags, description, stock
+        from homestay
+        where stock > 0
+          AND (
+            title like concat('%', #{keyword}, '%')
+                or tags like concat('%', #{keyword}, '%')
+                or description like concat('%', #{keyword}, '%')
+            )
+            limit 10
+    </select>
+
+    <select id="selectHomestayList" parameterType="Homestay" resultMap="HomestayResult">
+        select h.*, u.user_name
+        from homestay h
+        left join user u on h.user_id = u.user_id
+        <where>
+            <if test="title != null and title != ''">and h.title like concat('%', #{title}, '%')</if>
+            <if test="userId != null ">and h.user_id = #{userId}</if>
+            <if test="tags != null and tags != ''">and h.tags like concat('%', #{tags}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectHomestayByHomestayId" parameterType="String" resultMap="HomestayResult">
+        select homestay_id,
+               title,
+               price,
+               address,
+               tags,
+               image,
+               description,
+               user_id,
+               create_time,
+               stock
+        from homestay
+        where homestay_id = #{homestayId}
+    </select>
+
+    <select id="selectRecommendList" resultMap="HomestayResult">
+        SELECT * FROM homestay
+        WHERE homestay_id != #{homestayId}
+        AND (
+        <foreach collection="tags" item="tag" separator=" OR ">
+            FIND_IN_SET(#{tag}, tags)
+        </foreach>
+        )
+        ORDER BY RAND()
+        LIMIT 7
+    </select>
+
+    <insert id="insertHomestay" parameterType="Homestay">
+        insert into homestay
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="homestayId != null and homestayId != ''">homestay_id,</if>
+            <if test="title != null and title != ''">title,</if>
+            <if test="price != null">price,</if>
+            <if test="address != null and address != ''">address,</if>
+            <if test="tags != null and tags != ''">tags,</if>
+            <if test="image != null and image != ''">image,</if>
+            <if test="description != null and description != ''">description,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="stock != null">stock,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="homestayId != null and homestayId != ''">#{homestayId},</if>
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="price != null">#{price},</if>
+            <if test="address != null and address != ''">#{address},</if>
+            <if test="tags != null and tags != ''">#{tags},</if>
+            <if test="image != null and image != ''">#{image},</if>
+            <if test="description != null and description != ''">#{description},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="stock != null">#{stock},</if>
+        </trim>
+    </insert>
+
+    <update id="updateHomestay" parameterType="Homestay">
+        update homestay
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="price != null">price = #{price},</if>
+            <if test="address != null and address != ''">address = #{address},</if>
+            <if test="tags != null and tags != ''">tags = #{tags},</if>
+            <if test="image != null and image != ''">image = #{image},</if>
+            <if test="description != null and description != ''">description = #{description},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="stock != null">stock = #{stock},</if>
+        </trim>
+        where homestay_id = #{homestayId}
+    </update>
+
+    <delete id="deleteHomestayByHomestayIds" parameterType="String">
+        delete from homestay where homestay_id in
+        <foreach item="homestayId" collection="array" open="(" separator="," close=")">
+            #{homestayId}
+        </foreach>
+    </delete>
+</mapper>

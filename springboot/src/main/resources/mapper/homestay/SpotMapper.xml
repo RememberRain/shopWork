@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fast.homestay.mapper.SpotMapper">
+
+    <resultMap id="SpotResult" type="Spot">
+        <id property="spotId" column="spot_id"/>
+        <result property="homestayId" column="homestay_id"/> <result property="name" column="name"/>
+        <result property="location" column="location"/>
+        <result property="openingHours" column="opening_hours"/>
+        <result property="image" column="image"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="stock" column="stock"/> </resultMap>
+
+    <select id="selectSpotList" resultMap="SpotResult" parameterType="Spot">
+        select
+        s.spot_id,
+        s.homestay_id,
+        s.name,
+        s.location,
+        s.opening_hours,
+        s.image,
+        s.description,
+        s.create_time,
+        h.stock from spot s
+        left join homestay h on s.homestay_id = h.homestay_id
+        <where>
+            <if test="name != null and name != ''">
+                and s.name like concat('%', #{name} , '%')
+            </if>
+            <if test="homestayId != null and homestayId != ''">
+                and s.homestay_id = #{homestayId}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectSpotBySpotId" resultMap="SpotResult">
+        select
+            s.spot_id,
+            s.homestay_id,
+            s.name,
+            s.location,
+            s.opening_hours,
+            s.image,
+            s.description,
+            s.create_time,
+            h.stock
+        from spot s
+                 left join homestay h on s.homestay_id = h.homestay_id
+        where s.spot_id = #{spotId}
+    </select>
+
+    <insert id="insertSpot" parameterType="Spot">
+        insert into spot
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="spotId != null and spotId != ''">spot_id,</if>
+            <if test="homestayId != null and homestayId != ''">homestay_id,</if> <if test="name != null and name != ''">name,</if>
+            <if test="location != null and location != ''">location,</if>
+            <if test="openingHours != null and openingHours != ''">opening_hours,</if>
+            <if test="image != null and image != ''">image,</if>
+            <if test="description != null and description != ''">description,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="spotId != null and spotId != ''">#{spotId},</if>
+            <if test="homestayId != null and homestayId != ''">#{homestayId},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="location != null and location != ''">#{location},</if>
+            <if test="openingHours != null and openingHours != ''">#{openingHours},</if>
+            <if test="image != null and image != ''">#{image},</if>
+            <if test="description != null and description != ''">#{description},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateSpot" parameterType="Spot">
+        update spot
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="homestayId != null and homestayId != ''">homestay_id = #{homestayId},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="location != null and location != ''">location = #{location},</if>
+            <if test="openingHours != null and openingHours != ''">opening_hours = #{openingHours},</if>
+            <if test="image != null and image != ''">image = #{image},</if>
+            <if test="description != null and description != ''">description = #{description},</if>
+        </trim>
+        where spot_id = #{spotId}
+    </update>
+
+    <delete id="deleteSpotByIds" parameterType="String">
+        delete from spot where spot_id in
+        <foreach collection="array" item="spotId" open="(" separator="," close=")">
+            #{spotId}
+        </foreach>
+    </delete>
+</mapper>

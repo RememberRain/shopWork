@@ -1,0 +1,80 @@
+00:48:50.434 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - [shutDownGracefully,54] - Commencing graceful shutdown. Waiting for active requests to complete
+00:48:50.456 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - [doShutdown,76] - Graceful shutdown complete
+00:48:50.465 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+00:48:50.482 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+00:49:46.497 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 31496 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+00:49:46.500 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+00:49:47.474 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,111] - Tomcat initialized with port 8080 (http)
+00:49:47.484 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+00:49:47.485 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+00:49:47.486 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+00:49:47.607 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+00:49:47.607 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [prepareWebApplicationContext,296] - Root WebApplicationContext: initialization completed in 1056 ms
+00:49:48.081 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+00:49:48.268 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+00:49:48.637 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - [configure,114] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+00:49:49.094 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+00:49:49.109 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,243] - Tomcat started on port 8080 (http) with context path '/'
+00:49:49.114 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 2.965 seconds (process running for 4.592)
+00:53:03.587 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+00:53:03.588 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,532] - Initializing Servlet 'dispatcherServlet'
+00:53:03.590 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,554] - Completed initialization in 2 ms
+01:51:16.061 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - [shutDownGracefully,54] - Commencing graceful shutdown. Waiting for active requests to complete
+01:51:16.072 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - [doShutdown,76] - Graceful shutdown complete
+01:51:16.079 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+01:51:16.091 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+01:52:47.770 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 2076 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+01:52:47.776 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+01:52:48.595 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,111] - Tomcat initialized with port 8080 (http)
+01:52:48.606 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+01:52:48.607 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+01:52:48.608 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+01:52:48.647 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+01:52:48.648 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [prepareWebApplicationContext,296] - Root WebApplicationContext: initialization completed in 836 ms
+01:52:48.769 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+01:52:48.844 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+01:52:49.087 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - [configure,114] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+01:52:49.482 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+01:52:49.496 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,243] - Tomcat started on port 8080 (http) with context path '/'
+01:52:49.501 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 2.023 seconds (process running for 2.778)
+01:58:27.714 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:58:27.715 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,532] - Initializing Servlet 'dispatcherServlet'
+01:58:27.718 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,554] - Completed initialization in 2 ms
+02:06:55.731 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - [shutDownGracefully,54] - Commencing graceful shutdown. Waiting for active requests to complete
+02:06:55.740 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - [doShutdown,76] - Graceful shutdown complete
+02:06:55.746 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+02:06:55.754 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+09:27:52.181 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 39348 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+09:27:52.183 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+09:27:53.063 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,111] - Tomcat initialized with port 8080 (http)
+09:27:53.074 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+09:27:53.075 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+09:27:53.076 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+09:27:53.125 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+09:27:53.125 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [prepareWebApplicationContext,296] - Root WebApplicationContext: initialization completed in 908 ms
+09:27:53.237 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+09:27:53.314 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+09:27:53.616 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - [configure,114] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+09:27:54.008 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+09:27:54.023 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,243] - Tomcat started on port 8080 (http) with context path '/'
+09:27:54.028 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 2.161 seconds (process running for 3.256)
+09:27:56.950 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:27:56.951 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,532] - Initializing Servlet 'dispatcherServlet'
+09:27:56.952 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,554] - Completed initialization in 1 ms
+09:27:57.098 [http-nio-8080-exec-1] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-27T21:53:37Z. Current time: 2026-04-28T01:27:57Z, a difference of 12860096 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:11.161 [http-nio-8080-exec-10] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:11Z, a difference of 26763148 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:11.239 [http-nio-8080-exec-8] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:11Z, a difference of 26763239 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:27.535 [http-nio-8080-exec-3] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:27Z, a difference of 26779535 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:27.550 [http-nio-8080-exec-1] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:27Z, a difference of 26779550 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:48.389 [http-nio-8080-exec-2] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:48Z, a difference of 26800389 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:48.405 [http-nio-8080-exec-9] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:48Z, a difference of 26800405 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:53.434 [http-nio-8080-exec-5] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:53Z, a difference of 26805434 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:54:53.446 [http-nio-8080-exec-4] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:54:53Z, a difference of 26805446 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:08.693 [http-nio-8080-exec-6] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:08Z, a difference of 26820690 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:08.718 [http-nio-8080-exec-7] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:08Z, a difference of 26820717 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:22.537 [http-nio-8080-exec-10] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:22Z, a difference of 26834537 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:22.550 [http-nio-8080-exec-8] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:22Z, a difference of 26834550 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:40.507 [http-nio-8080-exec-3] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:40Z, a difference of 26852506 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:55:40.515 [http-nio-8080-exec-1] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:55:40Z, a difference of 26852514 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:56:09.169 [http-nio-8080-exec-2] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:56:09Z, a difference of 26881169 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+21:56:09.181 [http-nio-8080-exec-9] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-04-28T06:28:08Z. Current time: 2026-04-28T13:56:09Z, a difference of 26881180 milliseconds.  Allowed clock skew: 0 milliseconds.{}

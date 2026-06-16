@@ -1,0 +1,100 @@
+16:44:27.254 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 19576 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+16:44:27.260 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+16:44:28.579 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+16:44:28.581 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+16:44:28.581 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+16:44:28.645 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+16:44:28.805 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+16:44:28.906 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:44:29.775 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+16:44:29.800 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.032 seconds (process running for 4.99)
+16:44:47.276 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:49:54.298 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:49:54.299 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:49:58.720 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 18168 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+16:49:58.723 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+16:49:59.957 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+16:49:59.959 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+16:49:59.959 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+16:50:00.024 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+16:50:00.196 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+16:50:00.277 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:50:01.128 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+16:50:01.154 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 2.896 seconds (process running for 4.103)
+16:52:34.354 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:52:34.355 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:52:38.679 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 32652 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+16:52:38.683 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+16:52:39.783 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+16:52:39.785 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+16:52:39.785 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+16:52:39.860 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+16:52:40.027 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+16:52:40.101 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:52:40.993 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+16:52:41.026 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 2.797 seconds (process running for 3.836)
+16:52:45.637 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:57:53.095 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:57:53.096 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:57:58.252 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 35204 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+16:57:58.254 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+16:57:59.575 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+16:57:59.577 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+16:57:59.577 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+16:57:59.642 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+16:57:59.878 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+16:57:59.978 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:58:01.023 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+16:58:01.057 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.215 seconds (process running for 4.339)
+16:58:10.272 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:59:39.468 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+16:59:39.482 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+16:59:44.059 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 19224 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+16:59:44.063 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+16:59:45.318 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+16:59:45.321 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+16:59:45.321 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+16:59:45.407 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+16:59:45.682 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+16:59:45.796 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+16:59:47.104 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+16:59:47.147 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.644 seconds (process running for 4.724)
+16:59:49.873 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:02:07.546 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+17:02:07.552 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+17:02:12.600 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 22284 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+17:02:12.604 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+17:02:13.790 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+17:02:13.792 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+17:02:13.793 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+17:02:13.957 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+17:02:14.184 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+17:02:14.289 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+17:02:15.225 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+17:02:15.261 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.094 seconds (process running for 4.206)
+17:03:25.476 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:04:51.113 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+17:04:51.118 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+17:04:57.111 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 43396 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+17:04:57.116 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+17:04:58.371 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+17:04:58.373 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+17:04:58.373 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+17:04:58.445 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+17:04:58.711 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+17:04:58.854 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+17:05:00.305 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+17:05:00.345 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.699 seconds (process running for 4.824)
+17:05:07.632 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+17:05:07.632 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+17:05:10.252 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 4316 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+17:05:10.256 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+17:05:11.502 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Initializing ProtocolHandler ["http-nio-8080"]
+17:05:11.505 [main] INFO  o.a.c.c.StandardService - [log,168] - Starting service [Tomcat]
+17:05:11.505 [main] INFO  o.a.c.c.StandardEngine - [log,168] - Starting Servlet engine: [Apache Tomcat/10.1.54]
+17:05:11.589 [main] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring embedded WebApplicationContext
+17:05:11.790 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+17:05:11.876 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+17:05:12.887 [main] INFO  o.a.c.h.Http11NioProtocol - [log,168] - Starting ProtocolHandler ["http-nio-8080"]
+17:05:12.930 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 3.149 seconds (process running for 4.218)
+17:05:16.401 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,168] - Initializing Spring DispatcherServlet 'dispatcherServlet'

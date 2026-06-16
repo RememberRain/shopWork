@@ -1,0 +1,57 @@
+# 项目相关配置
+fast:
+  profile: ./file
+
+# spring配置
+spring:
+  ai:
+    openai:
+      api-key: sk-fd6eae5d3ddf44749d55eb0b464a7872
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fast?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: qwerljh..14
+  security:
+    user:
+      name: 123
+      password: 123
+  # Spring MVC 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+
+logging:
+  level:
+    com.fast: debug
+    org.springframework: info
+
+mybatis:
+  type-aliases-package: com.fast.**.domain
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+token:
+  header: Authorization
+  secret: ahsdiuhasidhiasdhiadshasdiasdhjisda3525a458454a12sd15asd484asd84asd54asd
+  expireTime: 300
+
+
+pagehelper:
+  helperDialect: mysql
+  support-methods-arguments: true
+  params: count=countSql

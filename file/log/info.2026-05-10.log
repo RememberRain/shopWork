@@ -1,0 +1,39 @@
+18:41:12.050 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 61852 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+18:41:12.061 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+18:41:16.086 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,111] - Tomcat initialized with port 8080 (http)
+18:41:16.134 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+18:41:16.139 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+18:41:16.142 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+18:41:16.272 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+18:41:16.272 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [prepareWebApplicationContext,296] - Root WebApplicationContext: initialization completed in 4006 ms
+18:41:16.637 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+18:41:16.842 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+18:41:17.591 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - [configure,114] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+18:41:18.690 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+18:41:18.733 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,243] - Tomcat started on port 8080 (http) with context path '/'
+18:41:18.746 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 7.839 seconds (process running for 10.897)
+18:41:22.566 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:41:22.566 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,532] - Initializing Servlet 'dispatcherServlet'
+18:41:22.567 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,554] - Completed initialization in 1 ms
+18:41:22.800 [http-nio-8080-exec-1] INFO  c.f.s.c.TokenService - [getLoginUser,109] - 解析用户信息异常=>io.jsonwebtoken.ExpiredJwtException: JWT expired at 2026-05-07T12:15:12Z. Current time: 2026-05-10T10:41:22Z, a difference of 253570798 milliseconds.  Allowed clock skew: 0 milliseconds.{}
+19:02:28.685 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - [shutDownGracefully,54] - Commencing graceful shutdown. Waiting for active requests to complete
+19:02:28.713 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - [doShutdown,76] - Graceful shutdown complete
+19:02:28.743 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2204] - {dataSource-1} closing ...
+19:02:28.852 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2277] - {dataSource-1} closed
+19:02:32.375 [main] INFO  c.f.SpringbootApplication - [logStarting,53] - Starting SpringbootApplication using Java 21.0.10 with PID 4552 (F:\fast\springboot\target\classes started by LJH in F:\fast)
+19:02:32.378 [main] INFO  c.f.SpringbootApplication - [logStartupProfileInfo,652] - No active profile set, falling back to 1 default profile: "default"
+19:02:34.078 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [initialize,111] - Tomcat initialized with port 8080 (http)
+19:02:34.100 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8080"]
+19:02:34.103 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+19:02:34.104 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/10.1.34]
+19:02:34.202 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+19:02:34.203 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - [prepareWebApplicationContext,296] - Root WebApplicationContext: initialization completed in 1776 ms
+19:02:34.540 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - [dataSource,68] - Init DruidDataSource
+19:02:35.171 [main] INFO  c.a.d.p.DruidDataSource - [init,1002] - {dataSource-1} inited
+19:02:36.050 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - [configure,114] - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+19:02:37.091 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8080"]
+19:02:37.125 [main] INFO  o.s.b.w.e.t.TomcatWebServer - [start,243] - Tomcat started on port 8080 (http) with context path '/'
+19:02:37.137 [main] INFO  c.f.SpringbootApplication - [logStarted,59] - Started SpringbootApplication in 5.218 seconds (process running for 6.64)
+19:03:07.683 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:03:07.683 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,532] - Initializing Servlet 'dispatcherServlet'
+19:03:07.685 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - [initServletBean,554] - Completed initialization in 1 ms

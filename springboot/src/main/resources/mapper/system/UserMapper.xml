@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fast.system.mapper.UserMapper">
+
+    <resultMap id="UserResult" type="User">
+
+        <id property="userId" column="user_id"/>
+        <!-- result : 普通字段映射每个<result>标签中的字段 -->
+        <result property="userName" column="user_name"/>
+        <result property="phonenumber" column="phonenumber"/>
+        <result property="sex" column="sex"/>
+        <result property="avatar" column="avatar"/>
+        <result property="password" column="password"/>
+        <result property="createTime" column="create_time"/>
+        <result property="roleId" column="role_id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="balance" column="balance"/>
+    </resultMap>
+
+
+    <!-- 根据用户名查询用户 -->
+    <select id="selectUserByUserName" resultMap="UserResult" parameterType="String">
+        select user_id, user_name, sex, avatar, password, create_time
+        from user
+        where user_name = #{userName}
+    </select>
+
+    <!-- 通过用户ID查询用户信息 -->
+    <select id="selectUserByUserId" resultMap="UserResult" parameterType="Long">
+        select u.user_id,
+               u.user_name,
+               u.phonenumber,
+               u.sex,
+               u.avatar,
+               u.password,
+               u.create_time,
+               u.balance,
+               ur.role_id,
+               r.role_name
+        from user u
+                 left join user_role ur on u.user_id = ur.user_id
+                 left join role r on ur.role_id = r.role_id
+        where u.user_id = #{userId}
+    </select>
+
+    <!--查询用户列表-->
+    <select id="selectUserList" resultMap="UserResult" parameterType="User">
+        select u.user_id, u.user_name, u.phonenumber, u.sex, u.avatar, u.password, u.create_time,
+        ur.role_id,
+        r.role_name
+        from user u
+        left join user_role ur on u.user_id = ur.user_id
+        left join role r on ur.role_id = r.role_id
+        <where>
+            <if test="userId != null">
+                and u.user_id = #{userId}
+            </if>
+            <if test="userName != null and userName != ''">
+                and u.user_name like concat('%', #{userName} ,'%')
+            </if>
+            <if test="phonenumber != null and phonenumber != ''">
+                and u.phonenumber = #{phonenumber}
+            </if>
+        </where>
+    </select>
+
+    <!--    忘记密码-->
+    <select id="selectUserByPhone" resultMap="UserResult" parameterType="String">
+        select user_id,
+               user_name,
+               phonenumber,
+               sex,
+               avatar,
+               password,
+               create_time,
+               balance
+        from user
+        where phonenumber = #{phonenumber}
+    </select>
+
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="userId">
+        insert into user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="userName != null and userName != ''">user_name,</if>
+            <if test="phonenumber != null and phonenumber != ''">phonenumber,</if>
+            <if test="avatar != null and avatar != ''">avatar,</if>
+            <if test="sex != null">sex,</if>
+            <if test="password != null and password != ''">password,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="userName != null and userName != ''">#{userName},</if>
+            <if test="phonenumber != null and phonenumber != ''">#{phonenumber},</if>
+            <if test="avatar != null and avatar != ''">#{avatar},</if>
+            <if test="sex != null">#{sex},</if>
+            <if test="password != null and password != ''">#{password},</if>
+        </trim>
+    </insert>
+
+    <!--更新用户头像-->
+    <update id="updateUserAvatar" parameterType="User">
+        update user
+        set avatar = #{avatar}
+        where user_id = #{userId}
+    </update>
+
+    <update id="updateUser" parameterType="User">
+        update user
+        <set>
+            <if test="userName != null and userName != ''">user_name = #{userName},</if>
+            <if test="phonenumber != null and phonenumber != ''">phonenumber = #{phonenumber},</if>
+            <if test="sex != null">sex = #{sex},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="balance != null">balance = #{balance},</if>
+        </set>
+        where user_id = #{userId}
+    </update>
+
+    <!-- 重置密码 -->
+    <update id="resetUserPwd">
+        update user
+        set password = #{newPassword}
+        where user_id = #{userId}
+    </update>
+
+    <!--    //更新账户余额-->
+    <update id="updateUserBalance">
+        update user
+        set balance = #{newBalance}
+        where user_id = #{userId}
+    </update>
+
+    <!--删除用户-->
+    <delete id="deleteUserByUserIds" parameterType="Long">
+        delete from user
+        where user_id in
+        <foreach collection="array" item="userId" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+
+</mapper>
